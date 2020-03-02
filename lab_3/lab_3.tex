@@ -1,0 +1,71 @@
+\documentclass[journal = jacsat, manuscript = article, layout = twocolumn]{achemso}
+
+\usepackage{mhchem}
+\usepackage{graphicx}
+\usepackage{mwe}
+
+% disable symbol next to email
+\makeatletter
+\def\acs@author@fnsymbol#1{}
+\makeatother
+% enable abstract
+\AbstractOn
+% put abstract and title on the same page
+\let\oldmaketitle\maketitle
+\let\maketitle\relax
+
+% macros
+\newcommand{\nidppe}{\ce{Ni(dppe)Cl2}}
+\newcommand{\nicl}{\ce{NiCl2 $\cdot$ 6H2O}}
+\newcommand{\nh}{\ce{NH3}}
+\newcommand{\nanh}{\ce{Na $\cdot$ NH3}}
+\newcommand{\nhbr}{\ce{NH4Br}}
+
+\title{aaaawubadugh}
+
+\author{David Qiu}
+\affiliation{Department of Chemistry, University of Illinois at Urbana-Champaign, 505 S Matthews Avenue, Urbana, IL, 61801}
+\email{davidlq2@illinois.edu}
+
+\begin{document}
+
+\twocolumn[
+\begin{@twocolumnfalse}
+\oldmaketitle
+\hrule
+\begin{abstract}
+
+\end{abstract}
+\hrule
+\vspace{6mm}%
+\end{@twocolumnfalse}
+]
+
+\section{Introduction}
+
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{figures/scheme.png}
+	\caption*{Scheme 1: Synthesis of dppe via reduction of triphenylphosphine.}
+\end{figure}
+
+Ammonia is a versatile inorganic solvent with the unique property of dissolving
+alkali metals to form solvated electrons, which act as extremely strong reducing
+agents in solution. In this experiment, \nanh\ was used to reduce a
+solution of triphenylphosphine to yield the bidentate ligand
+1,2-bis(diphenylphosphino)ethane (dppe). The newly-synthesized dppe ligand was
+then used to perform ligand substitution to generate its corresponding nickel
+complex. This experiment demonstrates the efficacy of using cheap,
+readily-available reagents to synthesize inorganic ligands for use in industry.
+
+\begin{figure}[H]
+	\includegraphics[width=0.4\textwidth]{figures/scheme-2.png}
+	\caption*{Scheme 2: Synthesis of \nidppe\ via direct ligand substitution of \nicl.}
+\end{figure}
+
+\section{Experimental Procedures}
+
+To a 500 mL three-necked round bottom flask was charged 200 mL of \nh, a glass-coated stir bar, and a dry ice condenser. Remaining necks were sealed with stoppers, and 2.379 g of Na was added slowly over the course of 3 minutes. A dark blue solution was allowed to form over the course of 10 minutes, and then 13.55 g of triphenylphosphine was added in small 1 g portions. This solution then reacted for 30 minutes, after which 5.068 g of \nhbr\ was added. Finally, 2.555 g of 1,2-dichloroethane was poured in and was allowed to react for 10 minutes. The flask was left open to air for 1 week to dry.
+
+The dried
+
+\end{document}
