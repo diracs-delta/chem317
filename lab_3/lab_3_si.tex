@@ -1,4 +1,4 @@
-\documentclass[journal = jacsat, manuscript = article, layout = twocolumn]{achemso}
+\documentclass[journal = jacsat, manuscript = suppinfo]{achemso}
 
 \usepackage[version = 4]{mhchem}
 \usepackage{graphicx}
@@ -8,11 +8,8 @@
 \makeatletter
 \def\acs@author@fnsymbol#1{}
 \makeatother
-% enable abstract
-\AbstractOn
-% put abstract and title on the same page
-\let\oldmaketitle\maketitle
-\let\maketitle\relax
+
+\SectionNumbersOn
 
 % macros
 \newcommand{\nidppe}{\ce{Ni(dppe)Cl2}}
@@ -37,115 +34,18 @@ Urbana-Champaign, 505 S Matthews Avenue, Urbana, IL, 61801}
 
 \begin{document}
 
-\twocolumn[
-\begin{@twocolumnfalse}
-\oldmaketitle
-\hrule
-\begin{abstract}
+\tableofcontents
 
-This experiment demonstrated successful synthesis of the dppe ligand via
-solvated electron reduction of triphenylphosphine followed by treatment with
-1,2-dichloroethane, as well as ligand substitution of \nicl\ to yield \nidppe.
-The reaction had an overall yield of 117.74\% for dppe and 47\% for \nidppe. \h\
-NMR, \p\ NMR, and IR spectra of dppe and \nidppe\ were analyzed, and confirmed
-experimental success while noting the presence of excess solvent and residual
-impurity. Future studies should improve upon this synthesis by minimizing
-residual solvent, improving \nidppe\ yield via temperature control, and using
-higher resolution NMR instruments to characterize dppe.
+\section{General Considerations}
 
-\end{abstract}
-\hrule
-\vspace{6mm}%
-\end{@twocolumnfalse}
-]
+\h\ NMR spectra were taken on a 60 MHz Nanalysis NMReady-60PRO tabletop NMR
+instrument coupled with a STC-1000 digital temperature controller. \p\ NMR
+spectra were taken on a 400 MHz  Varian NMR spectrometer. IR spectra were taken
+on a Perkin Elmder Spectrum Two FTIR spectrometer.
 
-\section{Introduction}
-
-\begin{figure}[H]
-	\includegraphics[width=0.5\textwidth]{figures/scheme.png}
-	\caption*{Scheme 1: Synthesis of dppe via reduction of
-	triphenylphosphine followed by reaction with 1,2-dichloroethane.}
-\end{figure}
-
-Ammonia is a versatile inorganic solvent with the unique property of dissolving
-alkali metals to form solvated electrons, which act as extremely strong reducing
-agents in solution. In this experiment, this property was used to reduce a
-solution of triphenylphosphine to yield the bidentate ligand
-1,2-bis(diphenylphosphino)ethane (dppe) upon reaction with 1,2-dichloroethane.
-The dppe was used to perform ligand substitution on \nicl, generating its
-corresponding complex \nidppe. This experiment demonstrates the efficacy of
-cheap, readily-available reagents to synthesize useful coordinating ligands for
-use in laboratory and industry.
-
-\begin{figure}[H]
-	\includegraphics[width=0.4\textwidth]{figures/scheme-2.png}
-	\caption*{Scheme 2: Synthesis of \nidppe\ via direct ligand substitution
-	of \nicl.}
-\end{figure}
-
-\section{Results and Discussion}
-
-The experiment resulted in a 117.74\% yield of dppe, and a 47\% yield of
-\nidppe. Consequentially, the dppe was either not fully dry prior to NMR and IR
-analysis, or it contained some residual impurity. The yield of \nidppe\ is
-interesting as well, as it implies that the ligand substitution reaction (Scheme
-2) was not driven to completion. This could be a result of either poor kinetics arising from reaction conditions (room temperature, short reaction time), or thermodynamic effects driving the reaction towards dissociation due to steric effects of the dppe ligand, though
-this is unlikely as polydentate ligands are known to be highly stable \cite{textbook}.
-
-To further investigate these findings, the 60 MHz \h\ and 400 MHz \p\ NMR
-spectra taken in \cdcl\ were analyzed. The \h\ NMR spectrum of dppe was rather
-poor; diethyl ether was a prominent impurity, and shifts corresponding to the
-aromatic hydrogens were not discernible in the \h\ NMR spectra. These are due
-both to the poor resolution of the 60 MHz instrument and the overlap with the
-solvent \cdcl\ peak. This statement is supported by the integration of 20
-aromatic protons underneath the broad peak \del\ 7.27 ppm, exactly corresponding
-to the 20 aromatic protons of the 26 in dppe. This finding has been replicated
-in other \h\ NMR spectra of dppe.\cite{dppenmr1}
-
-\begin{figure}
-	\includegraphics[width=0.4\textwidth]{figures/zoom_dppe_hnmr.png}
-	\caption{\h\ NMR of dppe, magnified to highlight the aromatic shifts at
-	\del\ 7.27 ppm (20 H). Note the overlap with the existing \cdcl\ peak and
-the diethyl ether signal (\del\ 3.68 ppm, q).}
-
-	\includegraphics[width=0.4\textwidth]{figures/zoom_nidppe_hnmr.png}
-	\caption{\h\ NMR of dppe, magnified to highlight the aromatic shifts at
-	\del\ 8.01 ppm (16 H) and \del\ 7.53 (24 H). Note the distinguished
-\cdcl\ peak (\del\ 7.24 ppm) upon formation of the nickel complex.}
-\end{figure}
-
-This hypothesis is further supported by the \h\ NMR spectrum of \nidppe, which was
-able to distinguish the same aromatic protons from the \cdcl\ shift. This is
-because the presence of the \niion\ metal center withdraws electron density from
-the lone pairs of phosphorus and the aromatic protons, causing them to appear
-further downfield and distinguishing the protons meta to phosphorus from those
-that are ortho or para to phosphorus.
-
-The \p\ NMR spectra were not particularly revealing, as there exists only one
-chemically distinct phosphorus atom in both dppe and \nidppe. However, there was
-an unknown impurity at \del\ -105.91 ppm and \del\ -221.00 ppm observed in both
-\p\ NMR spectra. This finding was not replicated elsewhere, suggesting that its
-corresponding impurities are unique to this synthetic method or the materials
-used in this experiment.
-
-Aside from the aforementioned impurities and the \h\ NMR multiplicities
-(indistinguishable due to the poor resolution), the chemical shifts of both the
-\h\ and \p\ spectra are in good agreement with existing studies done on dppe and
-\nidppe.\cite{dppenmr1, dppenmr2}
-
-The IR spectrum of dppe was not noteworthy, and indicated exclusively a C-H
-stretch and an O-H impurity. Interestingly, the IR spectrum of \nidppe\ was
-completely absent in the 3000-4000 \wavenum\ region. This is in fact largely
-consistent with existing IR studies on \nidppe\cite{dppeir}, which indicate
-exceedingly weak C-H stretches in \nidppe.
-
-In conclusion, this experiment demonstrated the successful synthesis of the dppe
-ligand via solvated electron reduction of triphenylphosphine followed by
-treatment with 1,2-dichloroethane, as well as ligand substitution to yield
-\nidppe. As indicated by the \h\ NMR, \p\ NMR, and IR analysis, future studies
-should improve upon this synthesis by minimizing residual solvent, improving
-\nidppe\ yield via temperature control, and using higher resolution NMR
-instruments to characterize dppe.
+n-hexane, ethanol, and \nh\ were sourced from UIUC. Diethyl ether, Na were
+sourced from Fischer Chem. 1,2-dichloroethane, triphenylphosphine were sourced
+from Acros. \nhbr\ was sourced from Oakwood Chemical.
 
 \section{Experimental Procedures}
 
@@ -168,6 +68,49 @@ was allowed to react for 5 minutes, forming a tomato-red solution.  \nidppe\ was
 filtered out and washed with diethyl ether. \h, \p\ NMR and IR spectra were
 taken of dppe and \nidppe, and are available for viewing in the Supporting
 Information.
+
+\textbf{\h\ and \p\ NMR:} \h\ and \p\ NMR were taken, and the results were as
+follows. (*) denotes an unidentified impurity.
+
+In the dppe NMR spectrum: \h: \del\ 7.27 ppm (20 H), \del\ 2.06 ppm (4
+H, t), \del\ 3.58 ppm (diethyl ether \cite{nmrtable}, q), \del\ 1.21 ppm
+(diethyl ether \cite{nmrtable}, t), \del\ 1.60 ppm (HDO \cite{nmrtable}, s).
+\p: \del\ -11.52 ppm (dppe), \del\ -105.91 ppm (*), \del\ -221.00 ppm (*).
+
+In the \nidppe\ NMR spectrum: \h: \del\ 8.01 ppm (16 H), \del\ 7.53 ppm (24 H),
+\del\ 7.24 ppm (\cdcl), \del\ 2.12 ppm (8 H), \del\ 1.50 ppm (HDO). \p
+\p: \del\ 58.23 ppm (\nidppe), \del\ -105.91 ppm (*), \del\ -221.00 ppm (*).
+
+In the dppe IR spectrum: $\nu$ = 3300 \wavenum\ (O-H), $\nu$ = 2950 \wavenum\
+(C-H).
+
+
+\section{NMR and IR Spectra}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{figures/dppe_hnmr}
+	\caption{\h\ NMR spectrum of dppe.}
+\end{figure}
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{figures/nidppe_hnmr.png}
+	\caption{\h\ NMR spectrum of \nidppe.}
+\end{figure}
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{figures/dppe_pnmr.png}
+	\caption{\p\ NMR spectrum of dppe.}
+\end{figure}
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{figures/nidppe_pnmr.png}
+	\caption{\p\ NMR spectrum of \nidppe.}
+\end{figure}
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{figures/dppe_ir.png}
+	\caption{IR spectrum of dppe.}
+\end{figure}
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{figures/nidppe_ir.png}
+	\caption{IR spectrum of \nidppe.}
+\end{figure}
 
 \bibliography{lab_3.bib}
 
