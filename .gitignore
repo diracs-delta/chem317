@@ -2,4 +2,5 @@
 *.log
 *.toc
 *.synctex.gz
+*.bbl
 acs*.bib
