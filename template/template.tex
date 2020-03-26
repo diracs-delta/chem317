@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{mwe}
 \usepackage{gensymb}
+\usepackage[labelfont=bf]{caption}
 
 % disable symbol next to email
 \makeatletter
@@ -14,6 +15,8 @@
 % put abstract and title on the same page
 \let\oldmaketitle\maketitle
 \let\maketitle\relax
+% shut up latex
+\hbadness=99999
 
 % macros
 \newcommand{\h}{$^1$H}
