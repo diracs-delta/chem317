@@ -45,10 +45,17 @@ Lanni,~E.~L.; McNeil,~A.~J. Mechanistic studies on Ni(dppe)Cl2-catalyzed
 \EndOfBibitem
 \bibitem[Percec \latin{et~al.}(2004)Percec, Golding, Smidrkal, and
   Weichold]{nidppe-intro-2}
-Percec,~V.; Golding,~G.~M.; Smidrkal,~J.; Weichold,~O. NiCl2 (dppe)-catalyzed
+Percec,~V.; Golding,~G.~M.; Smidrkal,~J.; Weichold,~O. NiCl2(dppe)-catalyzed
   cross-coupling of aryl mesylates, arenesulfonates, and halides with
-  arylboronic acids. \emph{The Journal of organic chemistry} \textbf{2004},
+  arylboronic acids. \emph{The Journal of Organic Chemistry} \textbf{2004},
   \emph{69}, 3447--3452\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Alfahd(2016)]{dppenmr1}
+Alfahd,~A. Synthesis of Ni(dppe)2 and nickel (I) Catalysts and their Ability to
+  Catalyzed Cross-Coupling. Ph.D.\ thesis, 2016\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -61,16 +68,9 @@ Cotton,~F.~A.; Wilkinson,~G.; Murillo,~C.~A.; Bochmann,~M.; Grimes,~R.
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Alfahd(2016)]{dppenmr1}
-Alfahd,~A. Synthesis of Ni (dppe) 2 and Nickel (I) Catalysts and their Ability
-  to Catalyzed Cross-Coupling. Ph.D.\ thesis, 2016\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
 \bibitem[Jarrett and Sadler(1991)Jarrett, and Sadler]{dppenmr2}
-Jarrett,~P.~S.; Sadler,~P.~J. Nickel (II) bis (phosphine) complexes.
-  \emph{Inorganic chemistry} \textbf{1991}, \emph{30}, 2098--2104\relax
+Jarrett,~P.~S.; Sadler,~P.~J. Nickel (II) bis(phosphine) complexes.
+  \emph{Inorganic Chemistry} \textbf{1991}, \emph{30}, 2098--2104\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -78,8 +78,8 @@ Jarrett,~P.~S.; Sadler,~P.~J. Nickel (II) bis (phosphine) complexes.
 \bibitem[Benial \latin{et~al.}(2002)Benial, Ramakrishnan, and
   Murugesan]{dppeir}
 Benial,~A. M.~F.; Ramakrishnan,~V.; Murugesan,~R. Infrared and laser Raman
-  studies of [Ni(II)(dppe)Cl2] and [Co(III)(dppe)2Cl2]PF6 (dppe =
-  1,2-bis(diphenylphosphino)ethane). \emph{Spectrochimica Acta Part A:
+  studies of [Ni(II)(dppe)Cl2] and [Co(III)(dppe)2Cl2]PF6
+  (dppe=1,2-bis(diphenylphosphino)ethane). \emph{Spectrochimica Acta Part A:
   Molecular and Biomolecular Spectroscopy} \textbf{2002}, \emph{58},
   1703--1712\relax
 \mciteBstWouldAddEndPuncttrue
