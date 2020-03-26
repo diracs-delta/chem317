@@ -8,7 +8,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{6}
+\begin{mcitethebibliography}{8}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -26,6 +26,33 @@
   {\relax}
   {\relax}
 
+\bibitem[Zakharov \latin{et~al.}(1983)Zakharov, Bukatov, and
+  Yermakov]{ziegler-natta}
+Zakharov,~V.~A.; Bukatov,~G.~D.; Yermakov,~Y.~I. \emph{Industrial
+  Developments}; Springer, 1983; pp 61--100\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Lanni and McNeil(2009)Lanni, and McNeil]{nidppe-intro-1}
+Lanni,~E.~L.; McNeil,~A.~J. Mechanistic studies on Ni(dppe)Cl2-catalyzed
+  chain-growth polymerizations: evidence for rate-determining reductive
+  elimination. \emph{Journal of the American Chemical Society} \textbf{2009},
+  \emph{131}, 16573--16579\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Percec \latin{et~al.}(2004)Percec, Golding, Smidrkal, and
+  Weichold]{nidppe-intro-2}
+Percec,~V.; Golding,~G.~M.; Smidrkal,~J.; Weichold,~O. NiCl2 (dppe)-catalyzed
+  cross-coupling of aryl mesylates, arenesulfonates, and halides with
+  arylboronic acids. \emph{The Journal of organic chemistry} \textbf{2004},
+  \emph{69}, 3447--3452\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[Cotton \latin{et~al.}(1988)Cotton, Wilkinson, Murillo, Bochmann, and
   Grimes]{textbook}
 Cotton,~F.~A.; Wilkinson,~G.; Murillo,~C.~A.; Bochmann,~M.; Grimes,~R.
@@ -51,18 +78,10 @@ Jarrett,~P.~S.; Sadler,~P.~J. Nickel (II) bis (phosphine) complexes.
 \bibitem[Benial \latin{et~al.}(2002)Benial, Ramakrishnan, and
   Murugesan]{dppeir}
 Benial,~A. M.~F.; Ramakrishnan,~V.; Murugesan,~R. Infrared and laser Raman
-  studies of [Ni (II)(dppe) Cl2] and [Co (III)(dppe) 2Cl2] PF6 (dppe= 1, 2-bis
-  (diphenylphosphino) ethane). \emph{Spectrochimica Acta Part A: Molecular and
-  Biomolecular Spectroscopy} \textbf{2002}, \emph{58}, 1703--1712\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Girolami \latin{et~al.}(1999)Girolami, Rauchfuss, and
-  Angelici]{handout}
-Girolami,~G.~S.; Rauchfuss,~T.~B.; Angelici,~R.~J. \emph{{Synthesis and
-  Techniques in Inorganic Chemistry}}, 3rd ed.; University Science Books,
-  1999\relax
+  studies of [Ni(II)(dppe)Cl2] and [Co(III)(dppe)2Cl2]PF6 (dppe =
+  1,2-bis(diphenylphosphino)ethane). \emph{Spectrochimica Acta Part A:
+  Molecular and Biomolecular Spectroscopy} \textbf{2002}, \emph{58},
+  1703--1712\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

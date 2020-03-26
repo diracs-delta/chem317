@@ -13,6 +13,8 @@
 % put abstract and title on the same page
 \let\oldmaketitle\maketitle
 \let\maketitle\relax
+% shut up latex
+\hbadness=99999
 
 % macros
 \newcommand{\nidppe}{\ce{Ni(dppe)Cl2}}
@@ -43,9 +45,13 @@ Urbana-Champaign, 505 S Matthews Avenue, Urbana, IL, 61801}
 \hrule
 \begin{abstract}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abstract
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 This experiment demonstrated successful synthesis of the dppe ligand via
 solvated electron reduction of triphenylphosphine followed by treatment with
-1,2-dichloroethane, as well as ligand substitution of \nicl\ to yield \nidppe.
+1,2-dichloroethane. Subsequent ligand substitution of \nicl\ yielded \nidppe.
 The reaction had an overall yield of 117.74\% for dppe and 47\% for \nidppe. \h\
 NMR, \p\ NMR, and IR spectra of dppe and \nidppe\ were analyzed, and confirmed
 experimental success while noting the presence of excess solvent and residual
@@ -59,23 +65,30 @@ higher resolution NMR instruments to characterize dppe.
 \end{@twocolumnfalse}
 ]
 
-\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Introduction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Economical synthesis of ligands and metal complexes using readily available
+reagents are of vital importance in both laboratory and industry. Polymer
+chemistry relies almost entirely on catalysts formed from these reactions. The
+Ziegler-Natta metallocene catalysts (e.g.\ \ce{Cp2ZrCl2}), which are still used
+today to generate polyethylene, are one famous example. Their efficacy depends
+on the metallocene ligands, which occupy multiple coordination sites while being
+too sterically hindered to fully chelate the metal ion. This property prevents
+excessive termination and other undesirable reactions during polymerization.
+\cite{ziegler-natta}
+
+A bulky, polydentate ligand such as dppe shares this property, making dppe
+complexes useful polymerization catalysts. This catalytic ability is exhibited
+in \nidppe, which is already known to promote chain growth and cross-coupling of
+aromatic molecules. \cite{nidppe-intro-1, nidppe-intro-2}
 
 \begin{figure}[H]
-	\includegraphics[width=0.5\textwidth]{figures/scheme.png}
+	\includegraphics[width=0.475\textwidth]{figures/scheme.png}
 	\caption*{Scheme 1: Synthesis of dppe via reduction of
 	triphenylphosphine followed by reaction with 1,2-dichloroethane.}
 \end{figure}
-
-Ammonia is a versatile inorganic solvent with the unique property of dissolving
-alkali metals to form solvated electrons, which act as extremely strong reducing
-agents in solution. In this experiment, this property was used to reduce a
-solution of triphenylphosphine to yield the bidentate ligand
-1,2-bis(diphenylphosphino)ethane (dppe) upon reaction with 1,2-dichloroethane.
-The dppe was used to perform ligand substitution on \nicl, generating its
-corresponding complex \nidppe. This experiment demonstrates the efficacy of
-cheap, readily-available reagents to synthesize useful coordinating ligands for
-use in laboratory and industry.
 
 \begin{figure}[H]
 	\includegraphics[width=0.4\textwidth]{figures/scheme-2.png}
@@ -83,14 +96,29 @@ use in laboratory and industry.
 	of \nicl.}
 \end{figure}
 
-\section{Results and Discussion}
+This experiment aimed to achieve economical synthesis of both the dppe ligand
+and \nidppe\ ligand for use in polymer chemistry. The synthetic route thus
+needed to maximize usage of readily available reagents for synthesis. Thus,
+triphenylphosphine was chosen as a precursor for dppe due to its availability
+and structural similarity. Na and \nh, both of which are also readily available,
+were chosen to perform solvated electron reduction on triphenylphosphine, which
+would yield the dppe ligand upon subsequent reaction with 1,2-dichloroethane
+(Scheme 1). The newly-synthesized dppe ligand was then reacted with \nicl\ to
+yield the polymerization catalyst \nidppe\ (Scheme 2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results and Discussion
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The experiment resulted in a 117.74\% yield of dppe, and a 47\% yield of
 \nidppe. Consequentially, the dppe was either not fully dry prior to NMR and IR
 analysis, or it contained some residual impurity. The yield of \nidppe\ is
 interesting as well, as it implies that the ligand substitution reaction (Scheme
-2) was not driven to completion. This could be a result of either poor kinetics arising from reaction conditions (room temperature, short reaction time), or thermodynamic effects driving the reaction towards dissociation due to steric effects of the dppe ligand, though
-this is unlikely as polydentate ligands are known to be highly stable \cite{textbook}.
+2) was not driven to completion. This could be a result of either poor kinetics
+   arising from reaction conditions (room temperature, short reaction time), or
+   thermodynamic effects driving the reaction towards dissociation due to steric
+   effects of the dppe ligand, though this is unlikely as polydentate ligands
+   are known to be highly stable \cite{textbook}.
 
 To further investigate these findings, the 60 MHz \h\ and 400 MHz \p\ NMR
 spectra taken in \cdcl\ were analyzed. The \h\ NMR spectrum of dppe was rather
@@ -146,28 +174,6 @@ treatment with 1,2-dichloroethane, as well as ligand substitution to yield
 should improve upon this synthesis by minimizing residual solvent, improving
 \nidppe\ yield via temperature control, and using higher resolution NMR
 instruments to characterize dppe.
-
-\section{Experimental Procedures}
-
-\textbf{dppe synthesis\cite{handout}:} To a round bottom flask was charged 200
-mL of \nh, a glass-coated stir bar, and a dry ice condenser. Na (2.379 g, 0.1035
-mol, 4 equiv.) was added slowly over 3 minutes. A dark blue solution was allowed
-to form over 10 minutes, and then triphenylphosphine (13.55 g, 0.05166 mol, 2
-equiv.) was added in 1 g portions.  This solution reacted for 30 minutes, after
-which \nhbr\ (5.068 g, 0.05174 mol, 2 equiv.) was added. 1,2-dichloroethane
-(2.555 g, 0.02582 mol, 1 equiv.) was poured in and reacted for 10 minutes.  The
-flask was left open to air for 1 week.
-
-The dried dppe was washed with DI water and rotary evaporated following
-dilution with ethanol. The purified dppe crystals then precipitated, and were
-filtered out of solution and washed with ethanol.
-
-\textbf{\nidppe\ synthesis\cite{handout}:} \nicl\ (0.320 g, 1.34 mol, 1 equiv.)
-was dissolved in ethanol and mixed with dppe (0.54 g, 1.34 mol, 1 equiv.). This
-was allowed to react for 5 minutes, forming a tomato-red solution.  \nidppe\ was
-filtered out and washed with diethyl ether. \h, \p\ NMR and IR spectra were
-taken of dppe and \nidppe, and are available for viewing in the Supporting
-Information.
 
 \bibliography{lab_3.bib}
 
