@@ -4,3 +4,4 @@
 *.synctex.gz
 *.bbl
 acs*.bib
+.~lock*
