@@ -11,20 +11,18 @@ solvent_density = 1.489
 # assume NMR freq (in MHz)
 nmr_freq = 500
 
-metals = ("Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn")
-metal_masses = {"Sc" : 44.96,
-                "Ti" : 47.87,
+metals = ("Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu")
+metal_masses = {"Ti" : 47.87,
                 "V"  : 50.94,
                 "Cr" : 52.00,
                 "Mn" : 54.94,
                 "Fe" : 55.85,
                 "Co" : 58.93,
                 "Ni" : 58.69,
-                "Cu" : 63.55,
-                "Zn" : 65.38}
+                "Cu" : 63.55}
 
 # number of d-electrons per metal
-metal_e = dict(zip(metals, range(3, 13)))
+metal_e = dict(zip(metals, range(4, 13)))
 
 # number of unpaired electrons assuming high-spin
 high_spin = (0,1,2,3,4,5,4,3,2,1,0)
@@ -45,6 +43,7 @@ def calc_assignments(data):
     data['delta_hz'] = data['delta_ppm'] * nmr_freq
 
     # data frame of calculated magnetic moments based on identity
+    mag_moments_df = pd.DataFrame(data['sample'])
     hs_calculations = pd.DataFrame(data['sample'])
     ls_calculations = pd.DataFrame(data['sample'])
 
@@ -53,6 +52,7 @@ def calc_assignments(data):
         conc = (data['solid_mass'] / MW) / data['solvent_vol']
         mag_susc = (3 * data['delta_hz']) / (4 * np.pi * (nmr_freq * 1E6) * conc)
         mag_moment = np.sqrt(8 * data['temp'] * mag_susc)
+        mag_moments_df[element] = mag_moment
 
         hs_elec = (metal_e[element] - data['ligand_no']).apply(lambda n: high_spin[n])
         ls_elec = (metal_e[element] - data['ligand_no']).apply(lambda n: low_spin[n])
@@ -60,10 +60,16 @@ def calc_assignments(data):
         hs_calculations[element] = np.abs(mag_moment - hs_elec.apply(lambda n: mag_moments[n] if 0 < n < 6 else np.inf))
         ls_calculations[element] = np.abs(mag_moment - ls_elec.apply(lambda n: mag_moments[n] if 0 < n < 6 else np.inf))
 
+    print("Calculated magnetic moments:")
+    print(mag_moments_df.to_markdown())
     print("Differences assuming high spin:")
     print(hs_calculations.to_markdown())
     print("Differences assuming low spin:")
     print(ls_calculations.to_markdown())
+
+    summary = data.drop(['ligand_no', 'delta_ppm', 'solvent_vol'], axis=1)
+
+    print(summary)
 
 def main():
     col_names = ['sample', 'color', 'solid_mass', 'solvent_mass', 'temp', 'ligand_no', 'delta_ppm']
