@@ -11,6 +11,7 @@ solvent_density = 1.489
 # assume NMR freq (in MHz)
 nmr_freq = 500
 
+metals = ("Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn")
 metal_masses = {"Sc" : 44.96,
                 "Ti" : 47.87,
                 "V"  : 50.94,
@@ -23,16 +24,13 @@ metal_masses = {"Sc" : 44.96,
                 "Zn" : 65.38}
 
 # number of d-electrons per metal
-metal_e = {"Sc" : 3,
-           "Ti" : 4,
-           "V"  : 5,
-           "Cr" : 6,
-           "Mn" : 7,
-           "Fe" : 8,
-           "Co" : 9,
-           "Ni" : 10,
-           "Cu" : 11,
-           "Zn" : 12}
+metal_e = dict(zip(metals, range(3, 13)))
+
+# number of unpaired electrons assuming high-spin
+high_spin = (0,1,2,3,4,5,4,3,2,1,0)
+
+# number of unpaired electrons assuming low-spin
+low_spin = (0,1,2,3,2,1,0,1,2,1,0)
 
 # magmnetic moments per number of unpaired e
 mag_moments = {1 : 1.73,
@@ -41,12 +39,14 @@ mag_moments = {1 : 1.73,
                4 : 4.90,
                5 : 5.92}
 
+
 def calc_assignments(data):
     data['solvent_vol'] = data['solvent_mass'] / solvent_density
     data['delta_hz'] = data['delta_ppm'] * nmr_freq
 
     # data frame of calculated magnetic moments based on identity
-    calculations = pd.DataFrame(data['sample'])
+    hs_calculations = pd.DataFrame(data['sample'])
+    ls_calculations = pd.DataFrame(data['sample'])
 
     for element in metal_masses:
         MW = metal_masses[element] + ligand_mass * data['ligand_no']
@@ -54,11 +54,16 @@ def calc_assignments(data):
         mag_susc = (3 * data['delta_hz']) / (4 * np.pi * (nmr_freq * 1E6) * conc)
         mag_moment = np.sqrt(8 * data['temp'] * mag_susc)
 
-        unpaired_e = - np.abs(metal_e[element] - data['ligand_no'] - 5) + 5
-        calculations[element] = np.abs(mag_moment - unpaired_e.apply(lambda n: mag_moments[n] if 0 < n < 6 else np.inf))
+        hs_elec = (metal_e[element] - data['ligand_no']).apply(lambda n: high_spin[n])
+        ls_elec = (metal_e[element] - data['ligand_no']).apply(lambda n: low_spin[n])
 
+        hs_calculations[element] = np.abs(mag_moment - hs_elec.apply(lambda n: mag_moments[n] if 0 < n < 6 else np.inf))
+        ls_calculations[element] = np.abs(mag_moment - ls_elec.apply(lambda n: mag_moments[n] if 0 < n < 6 else np.inf))
 
-    print(calculations.to_markdown())
+    print("Differences assuming high spin:")
+    print(hs_calculations.to_markdown())
+    print("Differences assuming low spin:")
+    print(ls_calculations.to_markdown())
 
 def main():
     col_names = ['sample', 'color', 'solid_mass', 'solvent_mass', 'temp', 'ligand_no', 'delta_ppm']
