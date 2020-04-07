@@ -5,3 +5,6 @@
 *.bbl
 acs*.bib
 .~lock*
+*.blg
+*.fdb_latexmk
+*.fls
