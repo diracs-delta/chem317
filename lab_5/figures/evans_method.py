@@ -40,7 +40,7 @@ mag_moments = {1 : 1.73,
 
 def calc_assignments(data):
     data['solvent_vol'] = data['solvent_mass'] / solvent_density
-    data['delta_hz'] = data['delta_ppm'] * nmr_freq
+    data.insert(4, 'delta_hz',  data['delta_ppm'] * nmr_freq)
 
     # data frame of calculated magnetic moments based on identity
     mag_moments_df = pd.DataFrame(data['sample'])
@@ -67,9 +67,17 @@ def calc_assignments(data):
     print("Differences assuming low spin:")
     print(ls_calculations.to_markdown())
 
-    summary = data.drop(['ligand_no', 'delta_ppm', 'solvent_vol'], axis=1)
+    print("Summary:")
+    summary = data.drop(['ligand_no', 'delta_ppm', 'solvent_vol'], axis=1).copy()
+    summary = summary.drop([0,1,6])
+    summary['mag_mom'] = [0, 2.57, 2.97, 1.96]
+    print(summary.to_markdown())
+    print(summary.to_latex())
 
-    print(summary)
+
+    print(mag_moments_df.to_latex())
+    print(hs_calculations.to_latex())
+    print(ls_calculations.to_latex())
 
 def main():
     col_names = ['sample', 'color', 'solid_mass', 'solvent_mass', 'temp', 'ligand_no', 'delta_ppm']
