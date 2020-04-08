@@ -40,13 +40,13 @@ Urbana-Champaign, 505 S Matthews Avenue, Urbana, IL, 61801}
 
 \section{General Considerations}
 
-\kmn, acetylacetonate, \cdcl, and \chcl were all sourced from Oakwood
+\kmn, acetylacetonate, \cdcl, and \chcl\ were all sourced from Oakwood
 Chemicals. A Bruker U500 500 MHz NMR spectrometer was used to obtain all \h\ NMR
 spectra.
 
 \section{Experimental}
 
-\subsection{Synthesis of \acac{Mn}}
+\subsection{Synthesis of \acac{Mn} \cite{handout, textbook}}
 
 To a 250 mL beaker was charged 0.500 g \kmn\ (3.16 mmol, 1 equiv.), 75 mL DI
 water, and a stir bar. This solution was heated to 70 \degree C with stirring
@@ -58,19 +58,21 @@ coarse glass frit, washed with 10 mL DI water 3 times, and dried on vacuum for
 30 minutes. This reaction resulted in a percent yield of 41\% (0.46 g total,
 1.11 g exp.).
 
-\subsection{Measurement of Magnetic Moments}
+\subsection{Measurement of Magnetic Moments \cite{handout}}
 
 A capillary tube containing 2 mL of 50:1 (v/v) deutero:proteo chloroform was
 inserted into a NMR tube. NMR samples were prepared through the addition of
 10--15 mg of the species and 600 \micro L of the same chloroform solution. This
 procedure was performed for \acac{Mn} and the four unknown samples provided.  A
-summary of observations for each of the unknowns is tabulated below.
+summary of observations for each of the unknowns is tabulated below.  The colors
+of the unknowns agree well with the colors of their assignments in literature.
+\cite{cracac_color, feacac_color, textbook_2}
 
 \tabcolsep=0.11cm
 \begin{table}
 \begin{tabular}{clcccccl}
 \toprule
-Unk.\ No.\ &           Color &  $m_\text{solid}$ (g) &  $m_\text{solvent}$ (g) &  $\Delta\nu$ (Hz) &   T (K) & $\mu_\text{calc}$ ($\mu_\text{B}$) & Assignment\\
+Unk.\ No.\ &           Color &  $m_\text{solid}$ (g) &  $m_\text{solvent}$ (g) &  $\Delta\nu$ (Hz) &   T (K) & $\mu$ ($\mu_\text{B}$) & Assignment\\
 \midrule
 1 &        Green &      0.0226 &         1.240 &       0 &  293 & 0    & \acac{Co} \\
 2 &       Violet &      0.0158 &         0.625 &     635 &  293 & 2.57 & \acac{Cr} \\
@@ -90,15 +92,18 @@ interpretation (500 MHz, $\delta$, 50:1 d:p chloroform) is as follows.
 \textbf{Unknown 2:} 7.26 ppm (\chcl), 8.53 ppm (p-\chcl).
 \textbf{Unknown 3:} 7.26 ppm (\chcl), 10.66 ppm (p-\chcl).
 \textbf{Unknown 4:} 7.26 ppm (\chcl), 7.96 ppm (p-\chcl).
+The lineshape of paramagnetically shifted peaks were observed to be heavily
+broadened, in excellent agreement with existing \h\ NMR spectra of paramagnetic
+compounds. \cite{paramag_nmr}
 
 \section{\h\ NMR Spectra}
-
-\subsection{\h\ NMR Spectra of \acac{Mn}}
 
 In each of the following NMR spectra, there exists instrumental artifact
 immediately upfield each peak, altering their peak shape. These are not
 paramagnetic shifts, nor are they impurities. They are labelled with an asterisk
 ``*".
+
+\subsection{\h\ NMR Spectra of \acac{Mn}}
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{figures/mnacac_hnmr.png}
@@ -152,7 +157,7 @@ the magnetic moments of the low and high-spin complexes of interest. The full
 set of data is tabulated below. Unknown 1 is excluded from Tables S3 and S4 on
 the basis of being diamagnetic.
 
-\subsection{Tabulated Values of $\mu_\text{calc}$}
+\subsection{Tabulated Values of $\mu$}
 
 \begin{table}[H]
 \begin{tabular}{lcccccccc}
@@ -166,8 +171,8 @@ Unknown 3 &  2.96 &  2.97 &  2.97 &  2.99 &  2.99 &  3.00 &  3.00 &  3.02 \\
 Unknown 4 &  1.90 &  1.91 &  1.91 &  1.92 &  1.93 &  1.94 &  1.94 &  1.96 \\
 \bottomrule
 \end{tabular}
-\caption{$\mu_\text{calc}$ for each of the samples in units of $\mu_\text{B}$, given the molar masses of
-the elements listed in the columns.}
+\caption{$\mu$ for each of the samples in units of $\mu_\text{B}$, calculated
+given the molar masses of the elements listed in the columns.}
 \end{table}
 
 \subsection{Tabulated Values of $|\Delta\mu|$ for High-Spin Complexes}
@@ -216,6 +221,6 @@ Unknown 4 &  0.92 &  1.95 &  0.91 &  0.19 &   inf &  0.21     &  0.88 &  0.23 \\
 \end{tabular}
 \end{table}
 
-% \bibliography{lab_5.bib}
+\bibliography{lab_5.bib}
 
 \end{document}

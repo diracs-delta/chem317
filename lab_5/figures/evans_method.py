@@ -69,8 +69,8 @@ def calc_assignments(data):
 
     print("Summary:")
     summary = data.drop(['ligand_no', 'delta_ppm', 'solvent_vol'], axis=1).copy()
-    summary = summary.drop([0,1,6])
-    summary['mag_mom'] = [0, 2.57, 2.97, 1.96]
+    summary = summary.drop([0,6])
+    summary['mag_mom'] = [0, 0, 2.57, 2.97, 1.96]
     print(summary.to_markdown())
     print(summary.to_latex())
 
