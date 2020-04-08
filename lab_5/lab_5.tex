@@ -1,0 +1,253 @@
+\documentclass[journal = jacsat, manuscript = article, layout = twocolumn]{achemso}
+
+\usepackage[version = 4]{mhchem}
+\usepackage{graphicx}
+\usepackage{mwe}
+\usepackage{gensymb}
+\usepackage[labelfont=bf]{caption}
+\usepackage{booktabs}
+
+% disable symbol next to email
+\makeatletter
+\def\acs@author@fnsymbol#1{}
+\makeatother
+% enable abstract
+\AbstractOn
+% put abstract and title on the same page
+\let\oldmaketitle\maketitle
+\let\maketitle\relax
+% shut up latex
+\hbadness=99999
+
+% disable symbol next to email
+\makeatletter
+\def\acs@author@fnsymbol#1{}
+\makeatother
+
+% macros
+\newcommand{\h}{$^1$H}
+\newcommand{\p}{$^{31}$P}
+\newcommand{\cdcl}{\ce{CDCl3}}
+\newcommand{\del}{$\delta = $}
+\newcommand{\wavenum}{cm$^{-1}$}
+\newcommand{\kmn}{\ce{KMnO4}}
+\newcommand{\chcl}{\ce{CHCl3}}
+\newcommand{\acac}[1]{\ce{#1(acac)3}}
+\newcommand{\acactwo}[1]{\ce{#1(acac)2}}
+
+\title{Identification of Unknown Metal Acetylacetonate Complexes via Evan's Method}
+
+\author{David Qiu}
+\affiliation{Department of Chemistry, University of Illinois at
+Urbana-Champaign, 505 S Matthews Avenue, Urbana, IL, 61801}
+\email{davidlq2@illinois.edu}
+
+\begin{document}
+
+\twocolumn[
+\begin{@twocolumnfalse}
+\oldmaketitle
+\hrule
+\begin{abstract}
+
+	Evan's method is a promising analytical technique for detection of
+	paramagnetic metal complexes, with applications for pollutant detection
+	in environmental chemistry. This experiment demonstrated successful
+	synthesis of \acac{Mn} (41\% yield), calculation of magnetic moments via
+	\h\ NMR and Evan's method, and qualitative determination of unknown
+	compounds. The unknown compounds (Unknowns 1--4) were identified as
+	follows: low-spin \acac{Co}, \acac{Cr}, high-spin \acac{Fe}, and
+	\acactwo{Cu}, with corresponding magnetic moments (in units of
+	$\mu_\text{B}$) 0, 2.56, 2.99, and 1.96 respectively. Future studies
+	should improve upon this work by using more vigorous stirring and finer
+	filters during synthesis and filtration of \acac{Mn}, by accounting for
+	diamagnetic corrections and LS-coupling, and by properly shimming and
+	calibrating NMR instruments prior to analysis via Evan's method.
+
+\end{abstract}
+\hrule
+\vspace{6mm}%
+\end{@twocolumnfalse}
+]
+
+\section{Introduction}
+
+Paramagnetism arises in inorganic complexes that possess unpaired electrons,
+which allow it to generate a magnetic field parallel to an external magnetic
+field. This property causes metal complexes to generate unique NMR spectra due
+to their influence on the internal magnetic field, and can be exploited to
+determine the identity of any paramagnetic complex. One such experimental
+technique is \emph{Evan's method}, which utilizes a sealed capillary of
+``control" diamagnetic solution, attaining an NMR spectrum of the (paramagnetic)
+metal complex solution with the capillary submerged, and determining the
+identity of the complex via the difference in the chemical shifts $\Delta f$ of
+\chcl\ in different magnetic environments.
+
+Upon determination of $\Delta f$ (in Hz), the \emph{magnetic susceptibility}
+$\chi_M$ is related by the expression \cite{handout}
+
+\begin{equation}
+	\chi_M = \frac{3 \Delta f}{4 \pi F c},
+\end{equation}
+
+where $F$ is the field strength (in Hz) and $c$ is the molar concentration of
+the complex, in mol/mL. $\chi_M$ is in turn related to the \emph{magnetic
+moment} $\mu$ by the relation
+
+\begin{equation}
+	\mu = \sqrt{8 \chi_M T},
+\end{equation}
+
+where $T$ is the temperature in K.
+
+Evan's method is thus especially useful for determination of both the presence
+and identity of inorganic metal complexes. This could be exploited in future
+studies to yield a novel method of detecting transition metal pollutants in the
+environment, which have become increasingly prevalent throughout the ecosystem,
+and have demonstrated a serious cause for concern in both our ecology and public
+health, even at sublethal concentrations. \cite{pollution1, pollution2} While
+analytical techniques for pollutant detection certainly exist and have advanced
+considerably in the past decade, \cite{detection1, detection2, detection3}  they
+often demonstrate a lack of large-scale extensibility and a burdensome economic
+cost.  Evan's method thus presents as a promising direction for pollutant
+detection.
+
+\begin{figure}
+	\ce{MnO4^- + H^+ + 3 Hacac $\hspace{3cm}$ \\
+	$\hspace{2cm}$ ->[100 \degree C][5 min] Mn(acac)3 + 2 H2O + O2}
+
+	\caption*{\textbf{Scheme 1:} Synthesis of \acac{Mn} via reduction of
+	\kmn\ in a boiling aqueous solution of acetylacetone.}
+\end{figure}
+
+In this experiment, \acac{Mn} was synthesized via aqueous reduction of \kmn\ in
+the presence of acetylacetone (Scheme 1), and Evan's method was used to
+determine the magnetic moments of \acac{Mn} and four other unknown metal
+acetylacetonate complexes, hereafter labelled Unknowns 1--4. The magnetic
+moments, determined via \h\ NMR, were then used to identify the unknowns and
+assign them to a transition metal complex. Metal acetylacetonate complexes are
+an important reagent in many industrial reactions \cite{acac_uses}, and were
+thus chosen to demonstrate the efficacy of Evan's method in their detection and
+identification. Furthermore, acetylacetonate complexes have a higher likelihood
+of being paramagnetic, as their low ligand field strength favors formation of
+high-spin complexes.\cite{textbook_2}
+
+\section{Results and Discussion}
+
+A percent yield of 41\% was recorded for the synthesis of \acac{Mn}. This yield
+is quite low, and could have resulted from either failure to vigorously stir the
+reaction mixture or from loss of product during the coarse glass frit filtration
+step. It is unlikely that there is a thermodynamic or kinetic effect limiting
+the yield, as literature studies reporting the exact same reaction times,
+temperatures, and molar ratios report a percent yield of 87\%.
+\cite{mnacac_yield} Future studies wishing to improve yields should use more
+vigorous stirring and use a more fine filtration apparatus.
+
+The unknown samples were all observed to be strongly colored first-row
+transition metals. Furthermore, all unknowns were tris-chelated except Unknown
+4, which was bis-chelated. All unknowns except Unknown 1 exhibited a
+paramagnetic shift in their respective \h\ NMR spectra. A summary of
+observations is tabulated in Table 1.
+
+\begin{table}[]
+\begin{tabular}{@{}lll@{}}
+\toprule
+Sample         & Color     & $\Delta f$ (Hz) \\ \midrule
+\ce{Mn(acac)3} & Purple    & 1320            \\
+Unk.\ 1        & Green     & 0               \\
+Unk.\ 2        & Violet    & 635             \\
+Unk.\ 3        & Crimson   & 1700            \\
+Unk.\ 4        & Blue-Gray & 345             \\ \bottomrule
+\end{tabular}
+\caption{Summary of observations for each sample.}
+\end{table}
+
+A thorough determination of the unknown complexes is non-trivial, as the molar
+concentration of the paramagnetic solution is unknown as the molar mass is
+unknown, and thus Equations 1 and 2 cannot be applied directly. $\mu$ must be
+computed for each element of interest, and then compared with the expected $\mu$
+of the corresponding complex. For instance, one would first assume an unknown to
+be \acac{M}, and compute $\mu$ using Equations 1 and 2, compare the calculated
+result with the expected value for both the corresponding low and high-spin
+complexes, and repeat this for all possible complexes. The complex which
+minimizes the absolute difference $|\Delta\mu| = |\mu - \mu_\text{exp}|$ is the
+identity of the unknown as evidenced by Evan's method. The summary of these
+results and their assignments are tabulated below.
+
+\tabcolsep = 0.11cm
+\begin{table}[]
+\begin{tabular}{@{}llll@{}}
+\toprule
+Sample         & $\mu$  & $|\Delta\mu|$  & Assignment            \\ \midrule
+\ce{Mn(acac)3} & 4.77                   & 0.12                         & --                  \\
+Unk.\ 1        & 0                      & 0                            & Low-spin \acac{Co}  \\
+Unk.\ 2        & 2.56                   & 0.85                         & \acac{Cr}           \\
+Unk.\ 3        & 2.99                   & 2.92                         & High-spin \acac{Fe} \\
+Unk.\ 4        & 1.96                   & 0.23                         & \acactwo{Cu}        \\ \bottomrule
+\end{tabular}
+\caption{Tabulated magnetic moments $\mu$ and their absolute difference $|\Delta\mu|$
+with respect to their corresponding assignment. All magnetic moments are in
+units of $\mu_\text{B}$. $\mu$ was calculated using the molar mass of the
+assigned complex.}
+\end{table}
+
+Unknown 1 was assigned on the basis of its diamagnetism and color. The only
+other diamagnetic tris-chelate is \ce{Sc^{3+}}, which is colorless in solution
+due to its lack of d-electrons. \cite{textbook_2} Thus, the only possible
+identity of Unknown 1 is the low-spin complex \acac{Co}. This result is
+interesting as the acac ligand is expected to generate high-spin complexes due
+to its low ligand field strength as mentioned earlier. This shows that in the
+extreme case of exactly 6 d-electrons, \acac{Co} preferentially forms a low-spin
+complex, which implies that the ligand field stabilization energy (LFSE) is just
+slightly lower than that of the exchange energy stabilizing the corresponding
+high-spin complex. This observation of low-spin \acac{Co} in the ground state is
+in agreement with existing literature on its magnetic properties.
+\cite{coacac_diamagnetic}
+
+Unknown 4 was easily assigned to \acactwo{Cu} on the basis of its similar
+magnetic moment and its blue color being that of a Cu(II) solution.
+\cite{textbook_2}
+
+Unknowns 2 and 3 demonstrated a high $|\Delta\mu|$ as shown in Table 2,
+exhibiting the limitations of reliance purely on Evan's method for qualitative
+determination. Unknown 2 was assigned to \acac{Cr} despite its calculated
+magnetic moment being more similar to that of \acac{Mn} because of its
+similarity in color to the \acac{Cr} complex. \cite{cracac_color, feacac_color}
+Similarly, Unknown 3 exhibited the famous crimson-red color of a Fe(III)
+solution, whose corresponding acetylacetonate complex is known to be high-spin.
+\cite{feacac_color}
+
+Unknowns 2 and 3 demonstrate different magnetic moments with respect to their
+assignments mainly due to poor \h\ NMR spectra (presented in the Supporting
+Information). Repetition of the same data analysis on literature values of the
+paramagnetic shifts \cite{handout} and another classmate's data (not included)
+demonstrate very similar magnetic moments to those of \acac{Cr} and
+high-spin \acac{Fe} respectively. Thus, future studies should attempt to properly
+calibrate and shim the \h\ NMR instrument prior to analysis via Evan's method.
+
+Another, less pertinent source of error arises in simplication. Equation 1 fails
+to account for the diamagnetic correction necessary for larger complexes,
+\cite{handout} and Equation 2 also fails to account for the magnetic moment
+arising from LS-coupling observed in the heavier transition metal elements.
+\cite{handout, textbook, textbook_2} These two effects, in conjunction, could
+have led to the anomalously low or high calculated magnetic moments determined
+via \h\ NMR and Evan's method.
+
+\section{Conclusion}
+
+In conclusion, this experiment successively demonstrated synthesis of \acac{Mn},
+calculation of magnetic moments via \h\ NMR and Evan's method, and qualitative
+determination of unknown compounds. The yield of \acac{Mn} was determined to be
+lower than those of literature under the same reaction conditions, and thus
+future studies should ensure vigorous stirring and usage of a more fine
+filtration apparatus. Direct application of Evan's method was complicated by
+both failure to account for diamagnetic corrections and LS-coupling, and by the
+poor \h\ NMR data due to improper shimming and calibration prior to analysis.
+Future studies should improve on this by using more accurate formulas for the
+magnetic moment (c.f.\ Girolami et al.) and ensuring proper calibration by
+visualizing correct peak shapes in \h\ NMR spectra prior to analysis via Evan's
+method.
+
+\bibliography{lab_5.bib}
+
+\end{document}
