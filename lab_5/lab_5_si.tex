@@ -74,9 +74,10 @@ of the unknowns agree well with the colors of their assignments in literature.
 \toprule
 Unk.\ No.\ &           Color &  $m_\text{solid}$ (g) &  $m_\text{solvent}$ (g) &  $\Delta\nu$ (Hz) &   T (K) & $\mu$ ($\mu_\text{B}$) & Assignment\\
 \midrule
-1 &        Green &      0.0226 &         1.240 &       0 &  293 & 0    & \acac{Co} \\
+\acac{Mn} & Purple &    0.0149 &         0.977 &    1315 &  293 & 4.97 & -- \\
+1 &        Green &      0.0226 &         1.240 &       0 &  293 & 0    & Low-spin \acac{Co} \\
 2 &       Violet &      0.0158 &         0.625 &     635 &  293 & 2.57 & \acac{Cr} \\
-3 &      Crimson &      0.0154 &         0.306 &    1700 &  293 & 2.97 & \acac{V}  \\
+3 &      Crimson &      0.0154 &         0.306 &    1700 &  293 & 2.97 & High-spin\acac{Fe}  \\
 4 &    Blue-Gray &      0.0156 &         0.885 &     345 &  293 & 1.96 & \acactwo{Cu} \\
 \bottomrule
 \caption{Table of observations recorded for each of the unknowns.}
@@ -220,6 +221,28 @@ Unknown 4 &  0.92 &  1.95 &  0.91 &  0.19 &   inf &  0.21     &  0.88 &  0.23 \\
 
 \end{tabular}
 \end{table}
+
+\subsection{Sample Calculation for \acac{Mn}}
+
+\begin{equation}
+	c = \frac{m_\text{solid}M}{m_\text{solvent} * \rho}
+	= \frac{0.0149 / 352.26} {0.977 * 1.489} \; \text{g/mL}
+	= 3.77 * 10^{-5} \; \text{g/mL}
+\end{equation}
+
+\begin{equation}
+	\chi_M = \frac{3 \Delta f}{4 \pi F c}
+	= \frac{3 * 1315}{4 \pi (500 * 10^6)(3.77 * 10^{-5})} \;\text{cm}^3\text{/mol}
+	= 0.0105 \;\text{cm}^3\text{/mol}
+\end{equation}
+
+\begin{equation}
+	\mu = \sqrt{8 \chi_M T}
+	    = \sqrt{8 * 0.0105 * 293} \;\mu_\text{B}
+	    = 4.97 \;\mu_\text{B}
+\end{equation}
+
+
 
 \bibliography{lab_5.bib}
 
