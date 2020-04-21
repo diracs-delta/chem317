@@ -1,0 +1,158 @@
+\documentclass[journal = jceda8, manuscript = article]{achemso}
+
+\usepackage[version = 4]{mhchem}
+\usepackage{graphicx}
+\usepackage{mwe}
+\usepackage{textcomp, gensymb}
+\usepackage[labelfont=bf]{caption}
+\usepackage{amsmath}
+
+% disable symbol next to email
+\makeatletter
+\def\acs@author@fnsymbol#1{}
+\makeatother
+% shut up latex
+\hbadness=99999
+
+% macros
+\newcommand{\h}{$^1$H}
+\newcommand{\p}{$^{31}$P}
+\newcommand{\cdcl}{\ce{CDCl3}}
+\newcommand{\wavenum}{cm$^{-1}$}
+\newcommand{\del}{$\delta$}
+\newcommand{\deleq}[1]{$\delta=#1$}
+\newcommand{\hamil}{\hat{\mathcal{H}}}
+
+\title{Synthesis of CdSe Semiconductor Nanocrystals}
+
+\author{David Qiu}
+\affiliation{Department of Chemistry, University of Illinois at
+Urbana-Champaign, 505 S Matthews Avenue, Urbana, IL, 61801}
+\email{davidlq2@illinois.edu}
+
+\begin{document}
+
+\section{Introduction}
+
+% Beginning with an Introduction (15 points) that includes the history and
+% mechanism of the reaction. You should explain the importance of the reaction to
+% inorganic chemistry and the significance to you - why did you choose this one?
+% Furthermore, you should explain the importance of this reaction in the world of
+% chemistry in general.
+
+Semiconductor nanostructures translate quantum-mechanical phenomena into unique,
+size-dependent, readily tunable electrical and optical
+properties.\cite{nano_rev} These hold promising applications for photovoltaics
+and green energy, where nanocrystals have already been applied to engineer
+highly-efficient, economical solar cells. \cite{solar_1, solar_2, solar_3}
+Other inorganic nanostructures have also been found to catalyze \ce{CO2} fixation
+\cite{co2_1, co2_2}, serve as fluorescent biological imaging tags, \cite{bio_1,
+bio_2} and even form single-electron transistors in nanoelectronics,
+\cite{nano_elec} all of which have extensive applications in critical
+technologies and industries in our society.
+
+Sadly, the presence of nanochemistry in modern research and industry dwarfs its
+presence in the undergraduate curriculum. The wide scope of nanochemistry is
+seldom discussed in courses, despite its numerous functions in modern chemistry.
+This set of experiments aims to change that by demonstrating modern synthetic
+techniques employed to generate nanostructures and educating on the unique
+electrical and optical properties rising from the both quantum phenomena of
+nanostructures.
+
+CdX (X = S, Se, Te) semiconductor spherical nanocrystals (i.e.\ quantum dots)
+display readily apparent optical properties, and are some of the simplest and
+most well-studied nanostructures made in the laboratory. Modern one-pot
+syntheses involving relatively non-toxic elemental precursors have been
+well-established by Peng and colleagues, thus making CdX quantum dots ideal
+targets for study in the undergraduate laboratory. \cite{peng_1, peng_2} Both
+shape and size are controlled simply by the CdO precursor concentration.  At
+moderate CdO concentrations, monodisperse (i.e.\ similar to each other in size)
+spherical nanocrystals are replicably and easily synthesized.  This is believed
+to occur due to diffusion-dependent crystal growth on certain faces of the
+nanocrystal upon heating. \cite{peng_mechanism}
+
+To provide a gentle introduction into the theory behind the optical properties
+of nanocrystals, one must first understand what happens during the absorption of
+a photon. It is well-established that in semiconductors, absorption of a photon
+results in the formation of a electron-hole pair, which can be roughly
+visualized as an electron (e) orbiting a positively-charged hole (h).
+\cite{semiconductor-text, excitons} This is known as a Wannier-Mott exciton, and
+typically has a large corresponding Bohr exciton radius, far greater than that
+of the Bohr radii of the constituent atoms.
+
+Thus, the Hamiltonian of a free Wannier-Mott exciton is trivially related by the
+expression
+
+\begin{equation}
+		\hamil = - \frac{\hbar}{2 m_h} \nabla_h^2
+		         - \frac{\hbar}{2 m_e} \nabla_e^2
+			 - \frac{e^2}{\epsilon |r_e - r_h|},
+\end{equation}
+
+where $m_e$ ($m_h$) represents the effective mass of the electron (hole), and
+$\epsilon$ represents the dielectric constant of the semiconductor. This is
+analogous to the Hamiltonian of the hydrogen atom. However, this equation must
+fail when the system undergoes quantum confinement, i.e.\ the nanocrystal radius
+is less than that of the exciton radius, and the exciton is no longer free.
+While a full derivation is beyond the scope of this paper, it suffices the
+mention that an additional polarization term $\hat V_\text{pol}$ must be
+included to account for the polarization of electric charge resulting from the
+formation of the exciton, which obeys a strong dependence on the radius of the
+spherical nanocrystal $R$. Following the derivation outlined by Brus, the energy
+of the lowest excited state of an exciton is approximated by the expression
+\cite{exciton_energy}
+
+\begin{equation}
+E = E_0 + \frac{\hbar^2\pi^2}{2R^2} \left[ \frac{1}{m_e} + \frac{1}{m_h} \right]
+    - \frac{1.8 e^2}{\epsilon R}
+    + \frac{e^2}{R} \overline{\sum^{\infty}_{n = 1} \alpha_n \left( \frac{S}{R} \right)^{2n}},
+\end{equation}
+
+where $E_0$ is the bulk band gap, $\alpha$ is a constant dependent on the
+dielectric constant of the semiconductor and the surrounding solvent, S is the
+position of the electron. The bar above the third term denotes that it should be
+taken as an integral over the entire wavefunction of the electron.
+
+While this equation is certainly complex, it demonstrates the energy of the
+excited state decreasing monotonically with increasing radius. This is exactly
+analogous to the particle-in-a-box problem introduced in undergraduate physical
+chemistry, which also exhibits an inverse dependence between the energy $E$ and
+the size of the box $L$.
+
+\section{Pedagogy}
+
+% Next should be a section on Pedagogy (15 points). What do you want your
+% students to learn from this experiment, both in terms of lab techniques and
+% broader conceptual aspects.
+
+In this experiment, students will learn the synthesis of CdS
+
+\section{Hazards}
+
+% Then a Hazards (10 points) section - this may be just a paragraph, but clearly
+% indicate any chemical or other hazards the students will encounter.
+
+\section{Experimental Procedures}
+
+% Experimental procedure (20 points). This part may be adapted from the literature
+% on which you are basing your paper. This should be <50% of the paper in terms of
+% length.
+
+\section{Results and Discussion}
+
+% Results and discussion (15 points). This section will discuss a number of
+% aspects including: how many lab periods the students will need and how many
+% hours for each as well as what will be accomplished in each period. What
+% problems are anticipated, what are the average or expected yields, and how will
+% the compound(s) be characterized?  Are there any byproducts expected? Each
+% experiment should include a characterization section where you detail which
+% techniques you will use, multinuclear NMR spectroscopy, IR spectroscopy, Evan’s
+% method,
+
+\section{Conclusion}
+
+% Conclusion (10 points). This can be just a paragraph.
+
+\bibliography{bib.bib}
+
+\end{document}
