@@ -45,32 +45,33 @@ Semiconductor nanostructures translate quantum-mechanical phenomena into unique,
 size-dependent, readily tunable electrical and optical
 properties.\cite{nano_rev} These hold promising applications for photovoltaics
 and green energy, where nanocrystals have already been applied to engineer
-highly-efficient, economical solar cells. \cite{solar_1, solar_2, solar_3}
-Other inorganic nanostructures have also been found to catalyze \ce{CO2} fixation
+highly-efficient, economical solar cells. \cite{solar_1, solar_2, solar_3} Other
+inorganic nanostructures have also been found to catalyze \ce{CO2} fixation
 \cite{co2_1, co2_2}, serve as fluorescent biological imaging tags, \cite{bio_1,
-bio_2} and even form single-electron transistors in nanoelectronics,
-\cite{nano_elec} all of which have extensive applications in critical
-technologies and industries in our society.
+bio_2} and even form single-electron transistors in nanoelectronics.
+\cite{nano_elec} Each of these developments embody extensive potential
+applications in critical technologies and industries of our society.
 
 Sadly, the presence of nanochemistry in modern research and industry dwarfs its
-presence in the undergraduate curriculum. The wide scope of nanochemistry is
-seldom discussed in courses, despite its numerous functions in modern chemistry.
-This set of experiments aims to change that by demonstrating modern synthetic
-techniques employed to generate nanostructures and educating on the unique
-electrical and optical properties rising from the both quantum phenomena of
-nanostructures.
+presence in the university classroom. Despite being a topic of fierce discussion
+in both physics and chemistry for decades, the wide scope of nanochemistry is
+seldom discussed in undergraduate curricula. Even many graduate programs do not
+offer such courses. This set of experiments aims to change that by introducing
+modern synthetic techniques employed to generate nanostructures and the unique
+electrical and optical properties rising from the quantum phenomena they
+exhibit.
 
 CdX (X = S, Se, Te) semiconductor spherical nanocrystals (i.e.\ quantum dots)
 display readily apparent optical properties, and are some of the simplest and
-most well-studied nanostructures made in the laboratory. Modern one-pot
-syntheses involving relatively non-toxic elemental precursors have been
-well-established by Peng and colleagues, thus making CdX quantum dots ideal
-targets for study in the undergraduate laboratory. \cite{peng_1, peng_2} Both
-shape and size are controlled simply by the CdO precursor concentration.  At
-moderate CdO concentrations, monodisperse (i.e.\ similar to each other in size)
-spherical nanocrystals are replicably and easily synthesized.  This is believed
-to occur due to diffusion-dependent crystal growth on certain faces of the
-nanocrystal upon heating. \cite{peng_mechanism}
+most well-studied nanostructures made in the laboratory. Modern syntheses
+involving relatively non-toxic elemental precursors have been well-established
+by Peng and colleagues, thus making CdX quantum dots ideal targets for study in
+the undergraduate laboratory. \cite{peng_1, peng_2} Both shape and size are
+controlled simply by the CdO precursor concentration.  At moderate CdO
+concentrations, monodisperse (i.e.\ similar to each other in size) spherical
+nanocrystals are replicably and easily synthesized.  This is believed to occur
+due to diffusion-dependent crystal growth on certain faces of the nanocrystal
+upon heating. \cite{peng_mechanism}
 
 To provide a gentle introduction into the theory behind the optical properties
 of nanocrystals, one must first understand what happens during the absorption of
@@ -79,9 +80,9 @@ results in the formation of a electron-hole pair, which can be roughly
 visualized as an electron (e) orbiting a positively-charged hole (h).
 \cite{semiconductor-text, excitons} This is known as a Wannier-Mott exciton, and
 typically has a large corresponding Bohr exciton radius, far greater than that
-of the Bohr radii of the constituent atoms.
+of the Bohr radii of the semiconductor's constituent atoms.
 
-Thus, the Hamiltonian of a free Wannier-Mott exciton is trivially related by the
+The Hamiltonian of a free Wannier-Mott exciton is trivially related by the
 expression
 
 \begin{equation}
@@ -92,16 +93,16 @@ expression
 
 where $m_e$ ($m_h$) represents the effective mass of the electron (hole), and
 $\epsilon$ represents the dielectric constant of the semiconductor. This is
-analogous to the Hamiltonian of the hydrogen atom. However, this equation must
-fail when the system undergoes quantum confinement, i.e.\ the nanocrystal radius
-is less than that of the exciton radius, and the exciton is no longer free.
-While a full derivation is beyond the scope of this paper, it suffices the
-mention that an additional polarization term $\hat V_\text{pol}$ must be
-included to account for the polarization of electric charge resulting from the
-formation of the exciton, which obeys a strong dependence on the radius of the
-spherical nanocrystal $R$. Following the derivation outlined by Brus, the energy
-of the lowest excited state of an exciton is approximated by the expression
-\cite{exciton_energy}
+entirely analogous to the Hamiltonian of the hydrogen atom. However, this
+equation must fail when the system undergoes quantum confinement, i.e.\ the
+nanocrystal radius is less than that of the exciton radius, and the exciton is
+no longer free.  While a full derivation is beyond the scope of this paper, it
+suffices the mention that an additional polarization term $\hat V_\text{pol}$
+must be included to account for the polarization of electric charge resulting
+from the formation of the exciton, which obeys a strong dependence on the radius
+of the spherical nanocrystal $R$. Following the derivation outlined by Brus, the
+energy of the lowest excited state of an exciton is approximated by the
+expression \cite{exciton_energy}
 
 \begin{equation}
 E = E_0 + \frac{\hbar^2\pi^2}{2R^2} \left[ \frac{1}{m_e} + \frac{1}{m_h} \right]
@@ -110,15 +111,16 @@ E = E_0 + \frac{\hbar^2\pi^2}{2R^2} \left[ \frac{1}{m_e} + \frac{1}{m_h} \right]
 \end{equation}
 
 where $E_0$ is the bulk band gap, $\alpha$ is a constant dependent on the
-dielectric constant of the semiconductor and the surrounding solvent, S is the
-position of the electron. The bar above the third term denotes that it should be
-taken as an integral over the entire wavefunction of the electron.
+dielectric constant of the semiconductor and the surrounding solvent, and S is
+the position of the electron. The bar above the third term denotes that it
+should be taken as an integral over the entire wavefunction of the electron.
 
-While this equation is certainly complex, it demonstrates the energy of the
-excited state decreasing monotonically with increasing radius. This is exactly
-analogous to the particle-in-a-box problem introduced in undergraduate physical
-chemistry, which also exhibits an inverse dependence between the energy $E$ and
-the size of the box $L$.
+While this equation is complex, and can only be evaluated computationally, it is
+apparent that Equation (2) predicts the energy of the excited state decreasing
+monotonically with increasing radius. This is exactly analogous to the
+particle-in-a-box problem introduced in introductory physical chemistry, which
+also exhibits an inverse dependence between the energy $E$ and the size of the
+box $L$.
 
 \section{Pedagogy}
 
@@ -126,10 +128,32 @@ the size of the box $L$.
 % students to learn from this experiment, both in terms of lab techniques and
 % broader conceptual aspects.
 
+In this experiment, students will learn how to perform hot injection synthesis
+of CdSe quantum dots, arguably the most important synthetic technique in
+nanochemistry today. Students will encounter important topics in nanochemistry
+such as nanocrystal size, shape control, band gaps, and monodispersity.
+Furthermore, students will analyze the collected absorbance and fluorescence
+emission spectra to answer questions regarding the relationship between the
+semiconductor band gap and nanocrystal size, and the theoretical underpinnings
+of such behavior as discussed in the introduction and explained more extensively
+by Brus. \cite{exciton_energy} Students will also revisit concepts
+discussed during physical chemistry, such as the Stokes shift and selection
+rules, and draw connections between those concepts and the collected spectra.
+
 \section{Hazards}
 
 % Then a Hazards (10 points) section - this may be just a paragraph, but clearly
 % indicate any chemical or other hazards the students will encounter.
+
+Octadecene is both viscous and flammable, and thus should be carefully handled
+near flames or sparks. Trioctylphosphine is especially corrosive and
+air-sensitive, and should only be transported via syringe from its packaging
+(typically in a Sure-Seal bottle). Oleic acid is air and light-sensitive, and is
+also an irritant. Both elemental Se and CdO are acutely toxic, and exposure can
+occur through inhalation, ingestion, or direct contact. All laboratory work
+should be handled in a well-ventilated fume hood with usage of standard PPE,
+including lab coats, nitrile gloves, and goggles. Waste should be disposed of as
+heavy metal waste. Glassware should be cleaned with soap and water.
 
 \section{Experimental Procedures}
 
@@ -144,9 +168,9 @@ flask is charged 13 mg CdO, 0.6 mL oleic acid, and 10 mL 1-octadecene (tech.,
 should be inserted through the rubber septum on a side neck. Insertion of the
 thermal couple can be difficult, and a small hole may be cut into the septum
 using a large needle or a scalpel. This thermal couple should then be connected
-to a heating mantle controlling the temperature of the round bottom flask.  If
-this is unavailable, a thermometer capable of measuring up to 300 \degree C can
-be used as a substitute, but this is less ideal.
+to a heating mantle controlling the temperature of the round bottom flask.  If a
+thermal couple is unavailable, a thermometer capable of measuring up to 300
+\degree C can be used as a substitute, but this is less ideal.
 
 The Se precursor is made with 30 mg ground Se, 5 mL of 1-octadecene, and
 0.4 mL trioctylphosphine in a glass scintillation vial with a stir bar. This is
@@ -155,20 +179,23 @@ to be heated and stirred until the Se is fully dissolved.
 Next, the round-bottom flask is stirred vigorously and heated to 225 \degree C,
 after which 1 mL of the Se precursor is injected into the flask. Immediately,
 the solution should immediately turn a cloudy black and rapidly progress towards
-a clear, highlighter-yellow. Ten 1 mL samples should be taken with a Pasteur
-pipette within 3 minutes of injection, with more samples being taken early in
-the reaction. A stopwatch should be used to record the time intervals following
+a clear, highlighter-yellow. Ten 1 mL samples are taken with a Pasteur pipette
+within 3 minutes of injection, with more samples being taken early in the
+reaction. A stopwatch should be used to record the time intervals following
 injection. These samples are then supposed to be stored in glass scintillation
-vials, and the nanocrystals should be allowed to ripen overnight to maximize
+vials, and the nanocrystals are allowed to ripen overnight to maximize
 monodispersity. \cite{ostwald}
 
 The CdSe aliquots should all then be transferred into centrifuge tubes, and
 precipitated with 5 mL acetone. The aliquots are then to be centrifuged at 10000
-rpm for 10 minutes. The supernatant should be discarded, and the nanocrystals
-should be re-dispersed in 1 mL hexane. This removes excess reagent and
-impurities formed during the synthesis, and improves the quality of subsequent
-spectra. UV-vis and fluorescence (400 nm excitation) spectra of each aliquot
-should then be taken in glass cuvettes.
+rpm for 10 minutes. As many of the students have not used a centrifuge prior, it
+is imperative that the instructors emphasize the importance of balancing the
+centrifuge rack to prevent damage to such expensive instrumentation. The
+supernatant is to be discarded, and the nanocrystals should be re-dispersed in
+1 mL hexane. This removes excess reagent and impurities formed during the
+  synthesis, and minimizes background of subsequent spectra. UV-vis and
+  fluorescence (400 nm excitation) spectra of each aliquot should then be taken
+  in glass cuvettes.
 
 \section{Results and Discussion}
 
@@ -192,8 +219,8 @@ Reporting nanocrystal yields is seldom performed in literature due to its
 impracticality and complexity. This is because of the competing differences in
 size, shape, ligand type, and ligand distribution of each nanocrystal. Thus, a
 simple mass-based calculation of reaction yield is ultimately meaningless, and
-thus is not expected of the students. However, students should be able to
-estimate the nanocrystal diameter within each aliquot based on absorbance and
+is not expected of the students. However, students should be able to estimate
+the nanocrystal diameter and quality of each aliquot based on absorbance and
 fluorescence spectra.
 
 \begin{figure}[H]
@@ -224,11 +251,11 @@ Reprinted from Boatman and colleagues. \cite{jce-2}}
 \end{figure}%
 
 Rather than using yield as the basis of reaction quality, monodispersity should
-be used. Monodispersity can be determined by the peak width (full-width,
-half-maximum) of the absorbance and fluroescence spectral peaks, with thinner
-peaks indicating a higher degree of monodispersity. Instructors may also provide
-spectra of nanocrystals both before and after ripening, and ask students to
-interpret differences between the spectra.
+be used. Monodispersity can be qualitatively determined by the peak width
+(full-width, half-maximum) of the absorbance and fluroescence spectral peaks,
+with thinner peaks indicating a higher degree of monodispersity. Instructors may
+also provide spectra of nanocrystals both before and after ripening, and ask
+students to interpret differences between the spectra.
 
 Absorbance and fluorescence spectra should reveal that larger CdSe nanocrystals
 (taken from aliquots which underwent a longer reaction time) have
@@ -245,15 +272,25 @@ during centrifugation.
 	Reprinted from Boatman and colleagues. \cite{jce-2}}
 \end{figure}
 
-There should be a noticable Stokes shift between the wavelengths of the
+There should also be a noticable Stokes shift between the wavelengths of the
 absorbance and emission peaks, coupled with a lower peak width of emission
 peaks, as shown in Figure 3. Especially gifted students should be able to
 explain these two phenomena in terms of non-radiative transitions and selection
-rules.
+rules. Finally, if possible, TEM imaging of students' samples should also be
+collected, to demonstrate the monodispersity and spherical shape control of this
+technique.
 
 \section{Conclusion}
 
 % Conclusion (10 points). This can be just a paragraph.
+
+In conclusion, this experiment aims to introduce undergraduates to the frontier
+of nanochemistry and demonstrate the hot-injection technique employed to
+synthesize CdSe nanocrystals. Students are asked to discuss the relationship
+between nanocrystal size and the peak location and width in the absorbance and
+fluorescence spectra. Furthermore, topics such as Wannier-Mott excitons, band
+gaps, and polarization energies should be discussed to further emphasize the
+theoretical underpinnings of the relationship between spectra and theory.
 
 \newpage
 
