@@ -6,6 +6,7 @@
 \usepackage{textcomp, gensymb}
 \usepackage[labelfont=bf]{caption}
 \usepackage{amsmath}
+\usepackage{subcaption}
 
 % disable symbol next to email
 \makeatletter
@@ -125,8 +126,6 @@ the size of the box $L$.
 % students to learn from this experiment, both in terms of lab techniques and
 % broader conceptual aspects.
 
-In this experiment, students will learn the synthesis of CdS
-
 \section{Hazards}
 
 % Then a Hazards (10 points) section - this may be just a paragraph, but clearly
@@ -137,6 +136,39 @@ In this experiment, students will learn the synthesis of CdS
 % Experimental procedure (20 points). This part may be adapted from the literature
 % on which you are basing your paper. This should be <50% of the paper in terms of
 % length.
+
+The synthesis of CdSe nanocrystals is adapted from Boatman and Kippeny and their
+respective coworkers. \cite{jce-1, jce-2} To a three-necked 50 mL round-bottom
+flask is charged 13 mg CdO, 0.6 mL oleic acid, and 10 mL 1-octadecene (tech.,
+90\%). Rubber septa should be placed on the side necks, and a thermal couple
+should be inserted through the rubber septum on a side neck. Insertion of the
+thermal couple can be difficult, and a small hole may be cut into the septum
+using a large needle or a scalpel. This thermal couple should then be connected
+to a heating mantle controlling the temperature of the round bottom flask.  If
+this is unavailable, a thermometer capable of measuring up to 300 \degree C can
+be used as a substitute, but this is less ideal.
+
+The Se precursor is made with 30 mg ground Se, 5 mL of 1-octadecene, and
+0.4 mL trioctylphosphine in a glass scintillation vial with a stir bar. This is
+to be heated and stirred until the Se is fully dissolved.
+
+Next, the round-bottom flask is stirred vigorously and heated to 225 \degree C,
+after which 1 mL of the Se precursor is injected into the flask. Immediately,
+the solution should immediately turn a cloudy black and rapidly progress towards
+a clear, highlighter-yellow. Ten 1 mL samples should be taken with a Pasteur
+pipette within 3 minutes of injection, with more samples being taken early in
+the reaction. A stopwatch should be used to record the time intervals following
+injection. These samples are then supposed to be stored in glass scintillation
+vials, and the nanocrystals should be allowed to ripen overnight to maximize
+monodispersity. \cite{ostwald}
+
+The CdSe aliquots should all then be transferred into centrifuge tubes, and
+precipitated with 5 mL acetone. The aliquots are then to be centrifuged at 10000
+rpm for 10 minutes. The supernatant should be discarded, and the nanocrystals
+should be re-dispersed in 1 mL hexane. This removes excess reagent and
+impurities formed during the synthesis, and improves the quality of subsequent
+spectra. UV-vis and fluorescence (400 nm excitation) spectra of each aliquot
+should then be taken in glass cuvettes.
 
 \section{Results and Discussion}
 
@@ -149,9 +181,81 @@ In this experiment, students will learn the synthesis of CdS
 % techniques you will use, multinuclear NMR spectroscopy, IR spectroscopy, Evan’s
 % method,
 
+It is expected that students complete this experiment over two separate lab
+periods, the first involving the synthesis and the second involving the
+purification and spectrum acquisition. The first lab period is expected to take
+roughly 90 to 120 minutes, including the glassware cleaning afterwards. The
+second lab period is expected to take at least 90 minutes as well, because
+students will likely have to queue to use the centrifuge.
+
+Reporting nanocrystal yields is seldom performed in literature due to its
+impracticality and complexity. This is because of the competing differences in
+size, shape, ligand type, and ligand distribution of each nanocrystal. Thus, a
+simple mass-based calculation of reaction yield is ultimately meaningless, and
+thus is not expected of the students. However, students should be able to
+estimate the nanocrystal diameter within each aliquot based on absorbance and
+fluorescence spectra.
+
+\begin{figure}[H]
+	\includegraphics[width=0.8\textwidth]{./figures/colors.png}
+	\caption{Various aliquots of CdSe nanocrystals, arranged from left to
+	right in order of increasing size. Below: Color of CdSe quantum dots under
+ambient conditions. Above: Color of CdSe quantum dots under a UV blacklight.
+Reprinted from Boatman and colleagues. \cite{jce-2}}
+\end{figure}
+
+\begin{figure}[ht]%
+	\centering%
+	\begin{subfigure}[b]{0.5 \textwidth}%
+		\centering%
+		\includegraphics[width=\textwidth]{./figures/absorbance}%
+		\subcaption{}%
+	\end{subfigure}%
+	\hfill%
+	\begin{subfigure}[b]{0.5 \textwidth}%
+		\centering%
+		\includegraphics[width=\textwidth]{./figures/emission}%
+		\subcaption{}%
+	\end{subfigure}%
+	\caption{Absorbance spectra (a) and fluroescent emission spectra at 400
+	nm excitation (b) of CdSe nanocrystals of various sizes. Larger
+	nanocrystals correspond to higher wavelength absorbance and emission. Reprinted
+	from Boatman and colleagues. \cite{jce-2}}%
+\end{figure}%
+
+Rather than using yield as the basis of reaction quality, monodispersity should
+be used. Monodispersity can be determined by the peak width (full-width,
+half-maximum) of the absorbance and fluroescence spectral peaks, with thinner
+peaks indicating a higher degree of monodispersity. Instructors may also provide
+spectra of nanocrystals both before and after ripening, and ask students to
+interpret differences between the spectra.
+
+Absorbance and fluorescence spectra should reveal that larger CdSe nanocrystals
+(taken from aliquots which underwent a longer reaction time) have
+correspondingly redshifted absorbance and emission peaks. This is in agreement
+with the theoretical Wannier-Mott exciton band gap detailed in the introduction
+and summarized in Equation (2), which predicts a lower band gap for larger
+nanocrystals. These spectra should resemble those presented in Figure 2, but
+with less background at lower wavelengths due to the removal of impurities
+during centrifugation.
+
+\begin{figure}[H]
+	\includegraphics[width=0.8\textwidth]{./figures/stokes.png}
+	\caption{Stokes shift observed for a given size CdSe quantum dot.
+	Reprinted from Boatman and colleagues. \cite{jce-2}}
+\end{figure}
+
+There should be a noticable Stokes shift between the wavelengths of the
+absorbance and emission peaks, coupled with a lower peak width of emission
+peaks, as shown in Figure 3. Especially gifted students should be able to
+explain these two phenomena in terms of non-radiative transitions and selection
+rules.
+
 \section{Conclusion}
 
 % Conclusion (10 points). This can be just a paragraph.
+
+\newpage
 
 \bibliography{bib.bib}
 
